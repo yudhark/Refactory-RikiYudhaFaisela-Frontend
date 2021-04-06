@@ -1,0 +1,29 @@
+[{
+    "userId": 1,
+    "id": 1,
+    "title": "",
+    "body": "",
+    "user": {
+        "id": 1,
+        "name": "m",
+        "username": "",
+        "email": "",
+        "address": {
+            "street": "",
+            "suite": "",
+            "city": "",
+            "zipcode": "",
+            "geo": {
+                "lat": "",
+                "lng": ""
+            }
+        },
+        "phone": "",
+        "website": "",
+        "company": {
+            "name": "",
+            "catchPhrase": "",
+            "bs": ""
+        }
+    }
+}]

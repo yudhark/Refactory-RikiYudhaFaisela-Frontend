@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="02.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">Censored Word in Sentences</div>
+        <div class="content">
+            <div class="uncensored-format">
+                <p>uncensored word</p>
+                <textarea class="textarea-box" name="uncensored" id="uncensored" cols="30" rows="10"></textarea>
+            </div>
+            <div class="middle-box">
+                <div class="btn-box">
+                    <button class="btn-convert" id="censor">Censor</button>
+                </div>
+            </div>
+            <div class="censored-format">
+                <p>censored word</p>
+                <textarea class="textarea-box" name="censored" id="censored" cols="30" rows="10" disabled></textarea>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $("#censor").click(function() {
+                var uncensoredword = $("#uncensored").val();
+                var censoredword = RestrictWords(uncensoredword);
+                $("#censored").val(censoredword);
+            });
+        });
+    </script>
+    <script src="02.js"></script>
+</body>
+
+</html>

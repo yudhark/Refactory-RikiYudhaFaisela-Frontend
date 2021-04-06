@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="01.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">Convert CSV format into Json Format</div>
+        <div class="content">
+            <div class="csv-format">
+                <p>CSV Format</p>
+                <textarea class="textarea-box" name="csvformat" id="csvformat" cols="30" rows="10"></textarea>
+            </div>
+            <div class="middle-box">
+                <div class="btn-box">
+                    <button class="btn-convert" id="csvtojson">Convert =></button>
+                </div>
+            </div>
+            <div class="json-format">
+                <p>JSON Format</p>
+                <textarea class="textarea-box" name="jsonformat" id="jsonformat" cols="30" rows="10" disabled></textarea>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $("#csvtojson").click(function() {
+                var csvData = $("#csvformat").val();
+                var jsonData = CSVToJSON(csvData);
+                $("#jsonformat").val(jsonData);
+            });
+        });
+    </script>
+    <script src="01.js"></script>
+</body>
+
+</html>
